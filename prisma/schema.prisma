@@ -10,7 +10,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+  // url      = env("DATABASE_URL")
 }
 
 enum jenisKendaraan {
@@ -19,11 +19,11 @@ enum jenisKendaraan {
 }
 
 model Parkir {
-  id               Int            @id @default(autoincrement())
-  platNomor        String
-  jenisKendaraan   jenisKendaraan
-  durasi           Int
-  total            Int
-  createdAt        DateTime       @default(now())
-  updatedAt        DateTime       @updatedAt
+  id             Int            @id @default(autoincrement())
+  platNomor      String
+  jenisKendaraan jenisKendaraan
+  durasi         Int
+  total          Int
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
 }
